@@ -82,11 +82,8 @@ system('brew install wget curl')
 system('mkdir -p ~/local_documents/coding_area/mac_installation && cd $_ && git clone git@github.com:AlbertMontolio/albert_dotfiles.git')
 system('cd ~/local_documents/coding_area/mac_installation/albert_dotfiles && zsh install.sh')
 
-# font inconsolate for zsh
-# system('open https://github.com/powerline/fonts/blob/master/Inconsolata/Inconsolata%20for%20Powerline.otf?raw=true')
-# system('open ~/Downloads/Inconsolata\ for\ Powerline.otf')
-
 # powerline fonts for zsh
+system('cd ~/local_documents/coding_area/mac_installation')
 system('git clone https://github.com/powerline/fonts.git')
 system('cd fonts $$ ./install.sh')
 
