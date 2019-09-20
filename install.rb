@@ -83,9 +83,8 @@ system('mkdir -p ~/local_documents/coding_area/mac_installation && cd $_ && git 
 system('cd ~/local_documents/coding_area/mac_installation/albert_dotfiles && zsh install.sh')
 
 # powerline fonts for zsh
-system('cd ~/local_documents/coding_area/mac_installation')
-system('git clone https://github.com/powerline/fonts.git')
-system('cd fonts $$ ./install.sh')
+system('cd ~/local_documents/coding_area/mac_installation && git clone https://github.com/powerline/fonts.git')
+system('cd fonts && ./install.sh')
 
 # vundle for vim
 system('git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim')
