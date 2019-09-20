@@ -93,4 +93,7 @@ system('cd fonts $$ ./install.sh')
 # vundle for vim
 system('git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim')
 
+# install vim packages
+system('vim +PluginInstall +qall')
+
 # system('source ~/.zshrc')
