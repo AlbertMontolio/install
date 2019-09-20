@@ -69,13 +69,14 @@ versions = %w(2.6.4 2.5.0)
 versions.each do |version|
   system("rbenv install #{version}")
   system("rbenv global #{version}")
+  system('source ~/.zshrc')
   system('gem install rails')
+  # install gems
+  system('gem install rake bundler rspec rubocop rubocop-performance pry pry-byebug hub colored octokit rails')
+  system('bundle install')
 end
 
 system("rbenv global #{versions.first}")
-
-# install gems
-system('gem install rake bundler rspec rubocop rubocop-performance pry pry-byebug hub colored octokit rails')
 
 # utils
 system('brew install wget curl node')
@@ -101,4 +102,4 @@ if !react_my_portfolio
   system('cd ~/local_documents/coding_area/personal_projects/react-my-portfolio && npm install')
 end
 
-# system('source ~/.zshrc')
+system('source ~/.zshrc')
