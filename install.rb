@@ -80,4 +80,8 @@ system('cd fonts $$ ./install.sh')
 # vundle for vim
 system('git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim')
 
+# create folders
+system('~/local_documents')
+system('~/local_documents/coding_area/personal_projects')
+system('~/local_documents/coding_area/clients')
 # system('source ~/.zshrc')
