@@ -73,7 +73,7 @@ end
 system("rbenv global #{versions.first}")
 
 # install gems
-system('gem install rake bundler rspec rubocop rubocop-performance pry pry-byebug hub colored octokit')
+system('gem install rake bundler rspec rubocop rubocop-performance pry pry-byebug hub colored octokit rails')
 
 # utils
 system('brew install wget curl node')
