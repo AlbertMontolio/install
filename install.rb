@@ -92,4 +92,8 @@ system('git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vund
 # install vim packages
 system('vim +PluginInstall +qall')
 
+# download personal projects
+system('cd ~/local_documents/coding_area/personal_projects && git clone git@github.com:AlbertMontolio/react-my-portfolio.git')
+system('cd ~/local_documents/coding_area/personal_projects/react-my-portfolio && npm install')
+
 # system('source ~/.zshrc')
