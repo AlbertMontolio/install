@@ -76,7 +76,7 @@ system("rbenv global #{versions.first}")
 system('gem install rake bundler rspec rubocop rubocop-performance pry pry-byebug hub colored octokit')
 
 # utils
-system('brew install wget curl')
+system('brew install wget curl node')
 
 # more config to zhsrc
 system('mkdir -p ~/local_documents/coding_area/mac_installation && cd $_ && git clone git@github.com:AlbertMontolio/albert_dotfiles.git')
