@@ -1,3 +1,16 @@
+# create folders
+local_documents = system('cd ~/local_documents')
+system('mkdir ~/local_documents') if !local_documents
+coding_area = system('cd ~/local_documents/coding_area')
+system('mkdir ~/local_documents/coding_area') if !coding_area
+personal_projects = system('cd ~/local_documents/coding_area/personal_projects')
+system('mkdir ~/local_documents/coding_area/personal_projects') unless personal_projects
+clients = system('cd ~/local_documents/coding_area/clients')
+system('mkdir ~/local_documents/coding_area/clients') unless clients
+mac_installation = system('cd ~/local_documents/coding_area/mac_installation')
+system('mkdir ~/local_documents/coding_area/mac_installation') unless mac_installation
+system('cd')
+
 # xcode
 puts 'Installing coding toolkit for your new brand mac...'
 system('ls')
@@ -80,14 +93,4 @@ system('cd fonts $$ ./install.sh')
 # vundle for vim
 system('git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim')
 
-# create folders
-local_documents = system('cd ~/local_documents')
-system('mkdir ~/local_documents') if !local_documents
-coding_area = system('cd ~/local_documents/coding_area')
-system('mkdir ~/local_documents/coding_area') if !coding_area
-personal_projects = system('cd ~/local_documents/coding_area/personal_projects')
-system('mkdir ~/local_documents/coding_area/personal_projects') unless personal_projects
-clients = system('cd ~/local_documents/coding_area/clients')
-system('mkdir ~/local_documents/coding_area/clients') unless clients
-system('cd')
 # system('source ~/.zshrc')
