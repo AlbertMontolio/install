@@ -81,7 +81,13 @@ system('cd fonts $$ ./install.sh')
 system('git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim')
 
 # create folders
-system('~/local_documents')
-system('~/local_documents/coding_area/personal_projects')
-system('~/local_documents/coding_area/clients')
+local_documents = system('cd ~/local_documents')
+system('mkdir ~/local_documents') if !local_documents
+coding_area = system('cd ~/local_documents/coding_area')
+system('mkdir ~/local_documents/coding_area') if !coding_area
+personal_projects = system('cd ~/local_documents/coding_area/personal_projects')
+system('mkdir ~/local_documents/coding_area/personal_projects') unless personal_projects
+clients = system('cd ~/local_documents/coding_area/clients')
+system('mkdir ~/local_documents/coding_area/clients') unless clients
+system('cd')
 # system('source ~/.zshrc')
