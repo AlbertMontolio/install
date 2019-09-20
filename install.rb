@@ -68,6 +68,8 @@ system('brew install rbenv')
 versions = %w(2.6.4 2.5.0)
 versions.each do |version|
   system("rbenv install #{version}")
+  system("rbenv global #{version}")
+  system('gem install rails')
 end
 
 system("rbenv global #{versions.first}")
@@ -93,8 +95,8 @@ system('git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vund
 system('vim +PluginInstall +qall')
 
 # download personal projects
-react-my-portfolio = system('cd ~/local_documents/coding_area/personal_projects ')
-if !react-my-portfolio
+react_my_portfolio = system('cd ~/local_documents/coding_area/personal_projects/react-my-portfolio')
+if !react_my_portfolio
   system('cd ~/local_documents/coding_area/personal_projects && git clone git@github.com:AlbertMontolio/react-my-portfolio.git')
   system('cd ~/local_documents/coding_area/personal_projects/react-my-portfolio && npm install')
 end
