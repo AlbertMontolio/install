@@ -27,6 +27,9 @@ if !which_brew
 end
 system('brew update')
 
+# postgresql
+system('brew install postgresql && brew services start postgresql')
+
 # oh-my-zsh
 puts 'installing oh-my-zsh...'
 system('sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"')
@@ -70,16 +73,15 @@ versions.each do |version|
   system("rbenv install #{version}")
   system("rbenv global #{version}")
   system('source ~/.zshrc')
-  system('gem install rails')
+  # system('gem install rails')
   # install gems
-  system('gem install rake bundler rspec rubocop rubocop-performance pry pry-byebug hub colored octokit rails')
-  system('bundle install')
+  system('gem install rake bundler rspec rubocop rubocop-performance pry pry-byebug hub colored octokit rails pg webpacker')
 end
 
 system("rbenv global #{versions.first}")
 
 # utils
-system('brew install wget curl node')
+system('brew install wget curl node yarn heroku/brew/heroku tmux') 
 
 # more config to zhsrc
 system('mkdir -p ~/local_documents/coding_area/mac_installation && cd $_ && git clone git@github.com:AlbertMontolio/albert_dotfiles.git')
